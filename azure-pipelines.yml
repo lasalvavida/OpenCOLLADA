@@ -27,4 +27,24 @@ jobs:
   - task: VSBuild@1
     inputs:
       solution: 'build/OpenCOLLADA.sln' 
-
+  - task: VSBuild@1
+    inputs:
+      solution: 'COLLADAMax/COLLADAMax.sln'
+  - task: VSBuild@1
+    inputs:
+      solution: 'COLLADAMaya/COLLADAMaya.sln'
+- job: Mac OS
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+  - task: Xcode@5
+    inputs:
+      configuration: 'build/OpenCOLLADA.xcodeproj
+  - task: Xcode@5
+    inputs:
+      configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj
+       
