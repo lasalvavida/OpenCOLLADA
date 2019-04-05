@@ -43,7 +43,7 @@ jobs:
       cmake ..
   - task: Xcode@5
     inputs:
-      configuration: 'build/OpenCOLLADA.xcodeproj
+      configuration: 'build/OpenCOLLADA.xcodeproj'
   - task: Xcode@5
     inputs:
       configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj'
