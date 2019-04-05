@@ -6,13 +6,27 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'Ubuntu-16.04'
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+      make
 
-steps:
-- script: |
-    mkdir build
-    cd build
-    cmake ..
-    make
-  displayName: 'Build OpenCOLLADA'
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+  - task: VSBuild@1
+    inputs:
+      solution: 'OpenCOLLADA.sln' 
+
