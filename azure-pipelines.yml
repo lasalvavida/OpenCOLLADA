@@ -41,10 +41,10 @@ jobs:
       mkdir build
       cd build
       cmake .. -G Xcode
-      ls
   - task: Xcode@5
     inputs:
       configuration: 'build/OPENCOLLADA.xcodeproj'
+      scheme: 'ALL_BUILD'
   - task: Xcode@5
     inputs:
       configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj'
