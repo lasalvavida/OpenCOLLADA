@@ -41,12 +41,13 @@ jobs:
       mkdir build
       cd build
       cmake .. -G Xcode
-      xcodebuild -showsdks
   - task: Xcode@5
     inputs:
       configuration: 'build/OPENCOLLADA.xcodeproj'
       scheme: 'ALL_BUILD'
+      sdk: macosx10.13
   - task: Xcode@5
     inputs:
       configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj'
+      sdk: macosx10.13
        
