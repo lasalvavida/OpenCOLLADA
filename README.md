@@ -2,6 +2,7 @@ Updated OpenCOLLADA tools [here](https://github.com/KhronosGroup/OpenCOLLADA/wik
 
 OpenCOLLADA
 ===========
+[![Build Status](https://dev.azure.com/lasalvavida/OpenCOLLADA/_apis/build/status/lasalvavida.OpenCOLLADA?branchName=master)](https://dev.azure.com/lasalvavida/OpenCOLLADA/_build/latest?definitionId=1&branchName=master)
 
 COLLADAMax and COLLADAMaya are new implementation of a 3ds Max or Maya plug-ins to export scene or parts of it to a COLLADA file, released under an MIT-license. 
 
