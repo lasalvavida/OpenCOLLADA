@@ -26,5 +26,5 @@ jobs:
       cmake ..
   - task: VSBuild@1
     inputs:
-      solution: 'OpenCOLLADA.sln' 
+      solution: 'build/OpenCOLLADA.sln' 
 
