@@ -33,7 +33,7 @@ jobs:
   - task: VSBuild@1
     inputs:
       solution: 'COLLADAMaya/COLLADAMaya.sln'
-- job: Mac OS
+- job: MacOS
   pool:
     vmImage: 'macOS-10.13'
   steps:
