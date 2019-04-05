@@ -46,5 +46,5 @@ jobs:
       configuration: 'build/OpenCOLLADA.xcodeproj
   - task: Xcode@5
     inputs:
-      configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj
+      configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj'
        
