@@ -13,9 +13,8 @@
 
 #include "COLLADABUPrerequisites.h"
 
-struct pcre;
-typedef struct pcre pcre;
-`
+#include "pcre.h"
+
 namespace COLLADABU
 {
 
