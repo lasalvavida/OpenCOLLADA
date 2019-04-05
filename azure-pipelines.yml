@@ -43,11 +43,11 @@ jobs:
       cmake .. -G Xcode
   - task: Xcode@5
     inputs:
-      configuration: 'build/OPENCOLLADA.xcodeproj'
+      xcWorkspacePath: 'build/OPENCOLLADA.xcodeproj'
       scheme: 'ALL_BUILD'
       sdk: macosx10.13
   - task: Xcode@5
     inputs:
-      configuration: 'COLLADAMaya/COLLADAMaya.xcodeproj'
+      xcWorkspacePath: 'COLLADAMaya/COLLADAMaya.xcodeproj'
       sdk: macosx10.13
        
