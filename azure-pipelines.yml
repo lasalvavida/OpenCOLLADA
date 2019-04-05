@@ -40,7 +40,7 @@ jobs:
   - script: |
       mkdir build
       cd build
-      cmake ..
+      cmake .. -G Xcode
       ls
   - task: Xcode@5
     inputs:
