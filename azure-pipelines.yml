@@ -41,6 +41,7 @@ jobs:
       mkdir build
       cd build
       cmake .. -G Xcode
+      xcodebuild -showsdks
   - task: Xcode@5
     inputs:
       configuration: 'build/OPENCOLLADA.xcodeproj'
