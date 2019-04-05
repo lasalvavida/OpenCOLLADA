@@ -14,6 +14,8 @@
 #include "COLLADABUPcreCompiledPattern.h"
 #include "COLLADABUHashFunctions.h"
 
+#include "pcre.h"
+
 #include <algorithm>
 
 namespace COLLADABU
