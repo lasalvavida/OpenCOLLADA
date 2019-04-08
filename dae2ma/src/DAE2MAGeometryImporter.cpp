@@ -25,6 +25,7 @@
 #include "MayaDMTransform.h"
 #include "MayaDMCommands.h"
 
+#include "COLLADAFWHashFunctions.h"
 #include "COLLADAFWPolygons.h"
 #include "COLLADAFWTrifans.h"
 #include "COLLADAFWTristrips.h"
