@@ -13,6 +13,7 @@
 
 #include "COLLADAFWPrerequisites.h"
 #include "COLLADAFWUniqueId.h"
+#include "COLLADAFWEdge.h"
 #include "COLLADABUhash_map.h"
 
 namespace COLLADABU_HASH_NAMESPACE_OPEN
