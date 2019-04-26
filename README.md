@@ -42,8 +42,20 @@ You should end up with a ready to be used OPENCOLLADA.xcodeproj.
 
 ### Linux *todo*
 
-Recent changes requires having C++11 enabled, thus GCC 4.7 must be installed.
+Recent changes requires having C++11 and regexp enabled, thus GCC 4.9 must be installed.
 As an example, for Ubuntu please check [this](http://askubuntu.com/questions/113291/how-do-i-install-gcc-4-7) and [this]( http://charette.no-ip.com:81/programming/2011-12-24_GCCv47/)
+
+For CentOS, please check [this](https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/)
+
+### On CentOS 7.6 x86_64 bits
+
+1. yum install cmake
+2. yum install git
+3. git clone https://github.com/KhronosGroup/OpenCOLLADA.git
+4. mkdir build
+5. cd build/
+6. cmake ../OpenCOLLADA/
+7. make
 
 ### Available build options and their default values
 
