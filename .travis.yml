@@ -1,0 +1,15 @@
+os:
+  - linux
+  - osx
+language: cpp
+compiler: g++
+cache: 
+- build
+addons:
+  apt:
+    packages:
+    - gcc
+    - g++
+    - cmake
+script: mkdir build && cd build && cmake .. && make
+
