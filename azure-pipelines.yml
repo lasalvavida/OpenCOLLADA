@@ -1,0 +1,53 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+      make
+- job: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+  - task: VSBuild@1
+    inputs:
+      solution: 'build/OpenCOLLADA.sln' 
+  - task: VSBuild@1
+    inputs:
+      solution: 'COLLADAMax/COLLADAMax.sln'
+  - task: VSBuild@1
+    inputs:
+      solution: 'COLLADAMaya/COLLADAMaya.sln'
+- job: MacOS
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G Xcode
+  - task: Xcode@5
+    inputs:
+      xcWorkspacePath: 'build/OPENCOLLADA.xcodeproj'
+      scheme: 'ALL_BUILD'
+      sdk: macosx10.13
+  - task: Xcode@5
+    inputs:
+      xcWorkspacePath: 'COLLADAMaya/COLLADAMaya.xcodeproj'
+      sdk: macosx10.13
+       
